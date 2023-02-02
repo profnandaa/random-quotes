@@ -1,0 +1,88 @@
+<!-- say you have this footer, or whatever place, just add <small id="quote"></small> -->
+<!-- or whatever styling you prefer -->
+<footer class="footer">
+  <div class="footer__inner">
+   <small id="quote">___<br/><em>"The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise."</em> &mdash;&mdash; Edsger W. Dijkstra</small>
+  </div>
+</footer>
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+
+<!-- quote generator -->
+<script>
+// Copyright © 2023 Anthoy Nandaa
+// MIT - https://mit-license.org/
+let quotes = [
+  {
+    say: "The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise.",
+    person: "Edsger W. Dijkstra"
+  },
+  {
+    say: "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil",
+    person: "Tony Hoare"
+  },
+  {
+    say: "Simplicity and elegance are unpopular because they require hard work and discipline to achieve and education to be appreciated.",
+    person: "Edsger W. Dijkstra"
+  },
+  {
+    say: "Beauty is our business.",
+    person: "Edsger W. Dijkstra"
+  },
+  {
+    say: "The unavoidable price of reliability is simplicity.",
+    person: "Tony Hoare"
+  },
+  {
+    say: "I call it my billion-dollar mistake. It was the invention of the null reference in 1965.",
+    person: "Tony Hoare"
+  },
+  {
+    say: "Inside every large program is a small program struggling to get out.",
+    person: "Tony Hoare"
+  },
+  {
+    say: "You cannot teach beginners top-down programming, because they don't know which end is up.",
+    person: "Tony Hoare"
+  },
+  {
+    say: "Talk is cheap, show me the code.",
+    person: "Linus Torvalds"
+  },
+  {
+    say: "Computers are good at following instructions, but not at reading your mind.",
+    person: "Donald Knuth"
+  },
+  {
+    say: "Make everything as simple as possible but not simpler.",
+    person: "Albert Einstein"
+  },
+  {
+    say: "One of my most productive days was throwing away 1,000 lines of code.",
+    person: "Ken Thompson"
+  },
+  {
+    say: "A ship in port is safe, but that's not what ships are built for.",
+    person: "Grace Hopper"
+  },
+  {
+    say: "A ship in port is safe, but that's not what ships are built for.",
+    person: "Grace Hopper"
+  },
+  {
+    say: "It's hardware that makes a machine fast. It's software that makes a fast machine slow.",
+    person: "Craig Reucassel"
+  },
+  {
+    say: "There's an old story about the person who wished his computer were as easy to use as his telephone. That wish has come true, since I no longer know how to use my telephone.",
+    person: "Bjarne Stroustrup"
+  },
+]
+
+let i = (new Date()).getSeconds() % quotes.length
+let quote = quotes[i]
+
+document.querySelector("small#quote").setHTML(`___<br/><em>"${quote.say}"</em> &mdash;&mdash; ${quote.person}`)
+</script>
+
+<!-- see it in action at https://krnl.to // thanks! -->
